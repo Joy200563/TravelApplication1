@@ -41,7 +41,7 @@ import com.example.travelapplibcation.navigation.ROUTE_REGISTER
 
 @Composable
 fun LoginScreen(navController: NavController){
-    Box {
+    Box (modifier = Modifier.fillMaxSize()){
         Image(painter = painterResource(id = R.drawable.background3)
             , contentDescription ="background" ,
             contentScale = ContentScale.FillBounds,
@@ -86,7 +86,7 @@ fun LoginScreen(navController: NavController){
         Button(onClick = {
             val mylogin= AuthViewModel(navController, context )
             mylogin.login(email.text.trim(),pass.text.trim())
-        }, modifier = Modifier.fillMaxWidth().padding(100.dp)) {
+        }, modifier = Modifier.fillMaxWidth().padding(150.dp)) {
             Text(text = "Log In",
                 color = Color.Cyan,
                 fontFamily = FontFamily.Serif)
@@ -95,7 +95,7 @@ fun LoginScreen(navController: NavController){
 
         Button(onClick = {
             navController.navigate(ROUTE_REGISTER)
-        }, modifier = Modifier.fillMaxWidth().padding(50.dp)) {
+        }, modifier = Modifier.fillMaxWidth().padding(150.dp)) {
             Text(text = "Register",
                 color = Color.Black,
                 fontFamily = FontFamily.Serif)

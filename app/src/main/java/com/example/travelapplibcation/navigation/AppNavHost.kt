@@ -12,7 +12,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.travelapplibcation.ui.theme.screens.about.AboutScreen
+//import com.example.travelapplibcation.ui.theme.screens.about.AboutScreen
 import com.example.travelapplibcation.ui.theme.screens.login.LoginScreen
 import com.example.travelapplibcation.ui.theme.screens.places.AddPlaceScreen
 import com.example.travelapplibcation.ui.theme.screens.places.ViewPlaces
@@ -29,9 +29,9 @@ fun AppNavHost(modifier: Modifier=Modifier, navController: NavHostController= re
         composable(ROUTE_HOME) {
             HomeScreen(navController)
         }
-        composable(ROUTE_ABOUT) {
-            AboutScreen(navController)
-        }
+//        composable(ROUTE_ABOUT) {
+//            AboutScreen(navController)
+//        }
         composable(ROUTE_REGISTER) {
             RegisterScreen(navController)
         }
@@ -50,6 +50,11 @@ fun AppNavHost(modifier: Modifier=Modifier, navController: NavHostController= re
         composable(ROUTE_VIEW_UPLOADS){
             ViewUploadsScreen(navController)
         }
+//        composable(ROUTE_UPDATE_PLACE+"/{id}"){
+//                passedData ->
+//            updatePlaceScreen(
+//                navController,passedData.arguments?.getString("id")!!)
+//        }
 
 
 

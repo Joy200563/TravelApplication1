@@ -181,7 +181,7 @@ fun ImagePicker(
             }
             Spacer(modifier = Modifier.height(20.dp))
 
-            Button(onClick = {
+            Button(onClick =  {
                 //-----------WRITE THE UPLOAD LOGIC HERE---------------//
                 val placeRepository = PlaceViewModel(navController,context)
                 placeRepository.savePlaceWithImage(

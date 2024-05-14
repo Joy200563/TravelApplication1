@@ -25,6 +25,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.travelapplibcation.data.PlaceViewModel
 import com.example.travelapplibcation.models.Place
+import com.example.travelapplibcation.navigation.ROUTE_ADD_PLACE
 
 
 @Composable
@@ -45,7 +46,7 @@ fun ViewPlaces(navController:NavHostController) {
                 .fillMaxSize(),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Text(text = "All products",
+            Text(text = "All places",
                 fontSize = 30.sp,
                 fontFamily = FontFamily.Cursive,
                 color = Color.Red)
@@ -99,15 +100,36 @@ fun ProductItem(
 //            Text(text = "Update")
 //        }
     }
+    @Composable
+    fun Placeitem(name:String, description: String, location: String,price:String, id:String,
+                    navController:NavHostController, placeRepository: PlaceViewModel) {
+
+        Column(modifier = Modifier.fillMaxWidth()) {
+            Text(text = name)
+            Text(text = description)
+            Text(text = location)
+            Text(text = price)
+            Button(onClick = {
+                placeRepository.deletePlaceRecord(id)
+            }) {
+                Text(text = "Delete")
+            }
+            Button(onClick = {
+                navController.navigate(ROUTE_ADD_PLACE+"/$id")
+            }) {
+                Text(text = "Add")
+            }
+        }
+
+    }
 
 }
+@Preview
+@Composable
+fun view() {
+    ViewPlaces(rememberNavController())
 
-//@Preview
-//@Composable
-//fun view() {
-//    ViewProductsScreen(rememberNavController())
-//
-//}
+}
 
 
 
