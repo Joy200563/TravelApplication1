@@ -45,15 +45,16 @@ import com.example.travelapplibcation.navigation.ROUTE_VIEW_UPLOADS
 
 @Composable
 fun AddPlaceScreen(navController: NavHostController){
-    Box {
-        Image(
+    Box { Image(
             painter = painterResource(id = R.drawable.elephant2),
             contentDescription = "background",
             contentScale = ContentScale.FillBounds,
             modifier = Modifier.matchParentSize()
         )
     }
-    Column(modifier = Modifier.fillMaxSize(),
+    Column(modifier = Modifier
+        .fillMaxSize()
+        .verticalScroll(rememberScrollState()),
         horizontalAlignment = Alignment.CenterHorizontally) {
         val context = LocalContext.current
         Text(
