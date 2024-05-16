@@ -28,6 +28,7 @@ import com.example.travelapplibcation.models.Upload
 
 @Composable
 fun ViewUploadsScreen(navController:NavHostController) {
+
     Column(modifier = Modifier,
         horizontalAlignment = Alignment.CenterHorizontally) {
 

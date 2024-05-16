@@ -30,6 +30,7 @@ import com.example.travelapplibcation.navigation.ROUTE_ADD_PLACE
 
 @Composable
 fun ViewPlaces(navController:NavHostController) {
+
     Column(modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally) {
 

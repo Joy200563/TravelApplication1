@@ -42,7 +42,7 @@ import com.example.travelapplibcation.navigation.ROUTE_REGISTER
 @Composable
 fun LoginScreen(navController: NavController){
     Box (modifier = Modifier.fillMaxSize()){
-        Image(painter = painterResource(id = R.drawable.background3)
+        Image(painter = painterResource(id = R.drawable.background5)
             , contentDescription ="background" ,
             contentScale = ContentScale.FillBounds,
             modifier = Modifier.matchParentSize()
@@ -95,9 +95,9 @@ fun LoginScreen(navController: NavController){
 
         Button(onClick = {
             navController.navigate(ROUTE_REGISTER)
-        }, modifier = Modifier.fillMaxWidth().padding(150.dp)) {
-            Text(text = "Register",
-                color = Color.Black,
+        }, modifier = Modifier.fillMaxWidth().padding(10.dp)) {
+            Text(text = " Register",
+                color = Color.White,
                 fontFamily = FontFamily.Serif)
         }
 

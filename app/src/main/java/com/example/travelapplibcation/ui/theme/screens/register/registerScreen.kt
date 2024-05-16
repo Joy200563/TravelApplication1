@@ -45,7 +45,7 @@ import com.example.travelapplibcation.navigation.ROUTE_LOGIN
 //import com.example.firebaseauth.navigation.ROUTE_REGISTER
 @Composable
 fun RegisterScreen(navController: NavController){
-    Box {
+    Box (modifier = Modifier.fillMaxSize()){
 
         Image(
             painter = painterResource(id = R.drawable.background4),

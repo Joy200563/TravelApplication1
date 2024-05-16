@@ -27,26 +27,33 @@ import com.example.travelapplibcation.navigation.ROUTE_VIEW_PLACES
 @Composable
 fun HomeScreen(navController: NavController) {
     Box (modifier = Modifier.fillMaxSize()){
+        Image(
+            painter = painterResource(id = R.drawable.bamboo),
+            contentDescription = "background",
+            contentScale = ContentScale.FillBounds,
+            modifier = Modifier.matchParentSize()
+        )
 
         Column {
 
 
             Text(
-                text = "Travel data storage made easy!!!",
+                text = "Travel  made easy!!!",
                 color = Color.Black,
                 fontSize = 20.sp,
                 fontFamily = FontFamily.Cursive,
+
             )
             Spacer(modifier = Modifier.height(400.dp))
             Button(
                 onClick = { navController.navigate(ROUTE_ADD_PLACE) },
-                modifier = Modifier.fillMaxWidth().padding(50.dp)
+                modifier = Modifier.fillMaxWidth().padding(30.dp)
             ) {
                 Text(text = "Add Places")
             }
             Button(
                 onClick = { navController.navigate(ROUTE_VIEW_PLACES) },
-                modifier = Modifier.fillMaxWidth().padding(50.dp)
+                modifier = Modifier.fillMaxWidth().padding(30.dp)
             ) {
                 Text(text = "View Places")
             }
